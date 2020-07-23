@@ -7,7 +7,7 @@ No annoying native build system or native dependencies that need to be compiled.
 ## Installation
 
 ```
-npm install JosephusPaye/node-graphviz --save
+npm install node-graphviz --save
 ```
 
 ## Usage
