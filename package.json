@@ -1,0 +1,16 @@
+{
+  "name": "node-graphviz",
+  "version": "0.1.0",
+  "description": "Compile graphs written in DOT to images, using GraphViz in Node.js",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "https://github.com/JosephusPaye/node-graphviz",
+  "author": "Josephus Paye II",
+  "license": "MIT",
+  "scripts": {
+    "test": "uvu tests"
+  },
+  "devDependencies": {
+    "uvu": "^0.3.0"
+  }
+}
