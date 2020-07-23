@@ -416,7 +416,11 @@ const nodeFs = require('fs');
             Promise.resolve(wasmBinary);
           }
           return new Promise(function (resolve, reject) {
-            const binaryPath = nodePath.join(__dirname, 'bin', 'graphvizlib.wasm');
+            const binaryPath = nodePath.join(
+              __dirname,
+              'bin',
+              'graphvizlib.wasm'
+            );
             nodeFs.readFile(binaryPath, function (err, binary) {
               wasmBinary = binary;
               resolve(binary);
