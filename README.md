@@ -28,7 +28,7 @@ const graph = `
     }
 `;
 
-// Compile the graph to SVG using the `dot` layout algorithm
+// Compile the graph to SVG using the `circo` layout algorithm
 graphviz.circo(graph, 'svg').then((svg) => {
   // Write the SVG to file
   fs.writeFileSync('graph.svg', svg);
