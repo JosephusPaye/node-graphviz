@@ -66,13 +66,13 @@ Performs layout for the supplied `dotSource`.
 
 Where:
 
-- `outputFormat` is one of (see [Output Formats](https://graphviz.gitlab.io/_pages/doc/info/output.html) for details):
+- `outputFormat` is one of the following (see [Output Formats](https://graphviz.gitlab.io/_pages/doc/info/output.html) for details):
   - `dot`
   - `dot_json`
   - `json`
   - `svg` (default)
   - `xdot_json`
-- `layoutEngine` is one of (see [Layout documentation](https://www.graphviz.org/documentation/) for details):
+- `layoutEngine` is one of the following (see [Layout documentation](https://www.graphviz.org/documentation/) for details):
   - `circo`
   - `dot` (default)
   - `fdp`
