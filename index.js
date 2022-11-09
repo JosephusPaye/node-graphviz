@@ -453,8 +453,12 @@ const nodeFs = require('fs');
               !wasmBinary &&
               typeof WebAssembly.instantiateStreaming === 'function' &&
               !isDataURI(wasmBinaryFile) &&
-              typeof fetch === 'function'
-            ) {
+              typeof fetch === 'function',
+              typeof process !== 'object' // only if NOT Node environment
+              ) {
+              // Node v17 and above fails on `fetch` since Node has `fetch` integrated natively.
+              // So `fetch === function` is actually true.
+              // Error is: `ERR_INVALID_URL` since it cannot fetch local files eg.: "./graphvizlib.wasm"
               fetch(wasmBinaryFile, { credentials: 'same-origin' }).then(
                 function (response) {
                   var result = WebAssembly.instantiateStreaming(response, info);
